@@ -1,0 +1,196 @@
+:root {
+    --fondo: #f2f5f3;
+    --tinta: #1e2b27;
+    --verde: #2f5d50;
+    --trigo: #e3a82b;
+    --blanco: #ffffff;
+    --borde: #d3dcd7;
+    --exito: #2f7d4f;
+    --error: #b3362b;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--fondo);
+    color: var(--tinta);
+}
+.encabezado {
+    background: var(--verde);
+    color: var(--blanco);
+    padding: 24px 32px;
+    border-bottom: 6px solid var(--trigo);
+}
+.encabezado h1 {
+    margin: 0 0 4px;
+    font-size: 2rem;
+}
+.encabezado p {
+    margin: 0;
+}
+h2 {
+    margin: 0 0 12px;
+}
+.mensaje {
+    min-height: 44px;
+    margin: 0;
+    padding: 12px 32px;
+    font-weight: 600;
+}
+.mensaje.exito {
+    background: #dcefe3;
+    color: var(--exito);
+}
+.mensaje.error {
+    background: #f6dcd9;
+    color: var(--error);
+}
+.mensaje.aviso {
+    background: #f8ecce;
+    color: #7a5a0c;
+}
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    padding: 24px 32px 40px;
+    align-items: start;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding: 16px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+.controles label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 600;
+}
+input,
+select {
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--blanco);
+    color: var(--tinta);
+}
+input {
+    width: 110px;
+}
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--trigo);
+    border-radius: 8px;
+    padding: 16px;
+}
+.tarjeta h3 {
+    margin: 0 0 4px;
+}
+.tarjeta p {
+    margin: 4px 0;
+}
+.variedad {
+    color: #5b6b65;
+}
+.precio {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--verde);
+}
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-menu {
+    background: var(--verde);
+    color: var(--blanco);
+}
+.btn-menu:hover {
+    background: #244a40;
+}
+.btn-quitar {
+    background: var(--blanco);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+.btn-quitar:hover {
+    background: #f6dcd9;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--trigo);
+    outline-offset: 2px;
+}
+.carrito {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 16px;
+    position: sticky;
+    top: 16px;
+}
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borde);
+}
+.item-carrito h4 {
+    margin: 0 0 4px;
+}
+.item-carrito p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.total {
+    margin: 16px 0 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.vacio {
+    color: #5b6b65;
+}
+@media (max-width: 800px) {
+    .contenido {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+ 
+    .carrito {
+        position: static;
+    }
+ 
+    .encabezado,
+    .mensaje {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

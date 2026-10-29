@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan del Aconcagua</title>
+    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Panaderia</h1>
+        <p>Elegi un producto, indica la cantidad y usa el menu</p>
+    </header>
+ 
+    <p id="mensaje" class="mensaje" role="status"></p>
+ 
+    <main class="contenido">
+        <section class="panel">
+            <h2>Menu</h2>
+            <div class="menu">
+                <button class="btn-menu" data-opcion="1">1. Ver productos</button>
+                <button class="btn-menu" data-opcion="2">2. Agregar al carrito</button>
+                <button class="btn-menu" data-opcion="3">3. Aplicar descuento</button>
+                <button class="btn-menu" data-opcion="4">4. Sacar del carrito</button>
+                <button class="btn-menu" data-opcion="5">5. Ver carrito</button>
+                <button class="btn-menu" data-opcion="6">6. Vaciar carrito</button>
+            </div>
+            <div class="controles">
+                <label>Producto
+                    <select id="select-producto"></select>
+                </label>
+                <label>Cantidad
+                    <input type="number" id="input-cantidad" min="1" value="1">
+                </label>
+                <label>Descuento (%)
+                    <input type="number" id="input-descuento" min="0" max="100" value="10">
+                </label>
+            </div>
+            <h2>Productos</h2>
+            <div id="contenedor-items" class="grilla"></div>
+        </section>
+        <aside class="carrito">
+            <h2>Tu carrito</h2>
+            <div id="contenedor-carrito"></div>
+            <p id="total-carrito" class="total"></p>
+        </aside>
+    </main>
+</body>
+</html>
+ 
