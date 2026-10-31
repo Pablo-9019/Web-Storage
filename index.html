@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pan del Aconcagua</title>
-    <script defer src="./js/main.js"></script>
+    <title>TecnoStore | Tecnología</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <header class="encabezado">
-        <h1>Panaderia</h1>
-        <p>Elegi un producto, indica la cantidad y usa el menu</p>
+        <h1>TecnoStore</h1>
+        <p>Computadoras y accesorios de tecnología</p>
     </header>
- 
+
     <p id="mensaje" class="mensaje" role="status"></p>
- 
+
     <main class="contenido">
-        <section class="panel">
-            <h2>Menu</h2>
-            <div class="menu">
-                <button class="btn-menu" data-opcion="1">1. Ver productos</button>
-                <button class="btn-menu" data-opcion="2">2. Agregar al carrito</button>
-                <button class="btn-menu" data-opcion="3">3. Aplicar descuento</button>
-                <button class="btn-menu" data-opcion="4">4. Sacar del carrito</button>
-                <button class="btn-menu" data-opcion="5">5. Ver carrito</button>
-                <button class="btn-menu" data-opcion="6">6. Vaciar carrito</button>
-            </div>
+        <section class="catalogo">
+            <h2>Computadoras y accesorios</h2>
             <div class="controles">
-                <label>Producto
-                    <select id="select-producto"></select>
+                <label for="busqueda">Buscar producto
+                    <input id="busqueda" type="search" placeholder="Escribe un nombre">
                 </label>
-                <label>Cantidad
-                    <input type="number" id="input-cantidad" min="1" value="1">
-                </label>
-                <label>Descuento (%)
-                    <input type="number" id="input-descuento" min="0" max="100" value="10">
-                </label>
+                <button id="ver-carrito" class="btn-menu" type="button">Ver carrito</button>
             </div>
-            <h2>Productos</h2>
-            <div id="contenedor-items" class="grilla"></div>
+            <div id="productos" class="grilla"></div>
         </section>
+
         <aside class="carrito">
-            <h2>Tu carrito</h2>
-            <div id="contenedor-carrito"></div>
-            <p id="total-carrito" class="total"></p>
+            <div class="encabezado-carrito">
+                <h2>Tu carrito</h2>
+                <button class="cerrar" type="button" aria-label="Cerrar carrito">×</button>
+            </div>
+            <ul id="lista" class="lista-carrito"></ul>
+            <p id="total" class="total"></p>
+            <button id="vaciar" class="btn-quitar" type="button">Vaciar carrito</button>
         </aside>
     </main>
 </body>
 </html>
- 
