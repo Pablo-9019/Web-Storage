@@ -158,14 +158,6 @@ document.getElementById("vaciar").addEventListener("click", () => {
     guardarCarrito()
 })
 
-document.getElementById("ver-carrito").addEventListener("click", () => {
-    panel.classList.add("active")
-})
-
-document.querySelector(".cerrar").addEventListener("click", () => {
-    panel.classList.remove("active")
-})
-
 buscar.addEventListener("input", filtrarProductos)
 
 renderizarProductos()
